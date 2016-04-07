@@ -8,9 +8,9 @@ describe('CommentBox', () => {
     component = renderComponent(CommentBox);
   });
   
-  // it('has the correct class', () => {
-  //   expect(component.find(''))
-  // });
+  it('has the correct class', () => {
+    expect(component).to.have.class('comment-box');
+  });
 
   it('has a text area', () => {
     expect(component.find('textarea')).to.exist;
@@ -33,7 +33,5 @@ describe('CommentBox', () => {
       component.simulate('submit');
       expect(component.find('textarea')).to.have.value('');
     });
-
   });
-
 });
